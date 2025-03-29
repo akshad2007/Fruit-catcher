@@ -1,0 +1,56 @@
+.game-container {
+    max-width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    background-color: #e6f2ff;
+    position: relative;
+    border: 2px solid #3b82f6;
+    overflow: hidden;
+  }
+  
+  .game-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 18px;
+  }
+  
+  .basket {
+    position: absolute;
+    bottom: 0;
+    background-color: #8B4513;
+    border-top: 4px solid #5D3A1A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .basket-inner {
+    width: 80%;
+    height: 75%;
+    background-color: #A0522D;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  .start-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .start-button:hover {
+    background-color: #45a049;
+  }
+  
+  .game-instructions {
+    text-align: center;
+    margin-top: 10px;
+    color: #666;
+  }
