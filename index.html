@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fruit Basket Catcher</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="game-container" aria-label="Fruit Basket Catcher game area">
+      <header class="hud">
+        <div class="hud-item">Score: <span id="score">0</span></div>
+        <div class="hud-item">Lives: <span id="lives">3</span></div>
+      </header>
+
+      <div id="basket" aria-label="Basket">🧺</div>
+
+      <div id="overlay" class="hidden" role="dialog" aria-modal="true">
+        <div class="overlay-panel">
+          <h1>Game Over</h1>
+          <p>Your score: <span id="final-score">0</span></p>
+          <button id="restart-btn" type="button">Restart</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
