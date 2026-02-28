@@ -9,8 +9,4 @@ A fun and interactive Fruit Catcher Game built using React! Test your reflexes a
 ✅ Classified Frontend & Backend – Organized structure for scalability.
 
 🛠️ Tech Stack
-Frontend: React.js, CSS
-
-Backend: Node.js (if applicable)
-
-State Management: React Hooks (useState, useEffect)
+Html Css and Javascript
