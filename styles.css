@@ -1,0 +1,126 @@
+:root {
+  --hud-bg: rgba(255, 255, 255, 0.2);
+  --panel-bg: rgba(8, 14, 44, 0.8);
+  --text: #ffffff;
+  --basket-shadow: rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  display: grid;
+  place-items: center;
+  background: linear-gradient(160deg, #5a52ff 0%, #2ab0ff 40%, #87ff80 100%);
+  overflow: hidden;
+}
+
+#game-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+.hud-item {
+  background: var(--hud-bg);
+  padding: 0.5rem 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 0.65rem;
+  backdrop-filter: blur(3px);
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+#basket {
+  position: absolute;
+  bottom: 1.1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130px;
+  height: 90px;
+  display: grid;
+  place-items: center;
+  font-size: 4rem;
+  filter: drop-shadow(0 8px 8px var(--basket-shadow));
+  user-select: none;
+}
+
+.fruit {
+  position: absolute;
+  top: -60px;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  user-select: none;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+  will-change: transform;
+}
+
+#overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  background: rgba(10, 15, 45, 0.6);
+  display: grid;
+  place-items: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.overlay-panel {
+  background: var(--panel-bg);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 1rem;
+  text-align: center;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+.overlay-panel h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.overlay-panel p {
+  margin: 0.8rem 0 1.2rem;
+  font-size: 1.15rem;
+}
+
+#restart-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 0.65rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: #132355;
+  background: linear-gradient(90deg, #ffd66e, #ffb347);
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+#restart-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 179, 71, 0.4);
+}
